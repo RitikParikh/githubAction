@@ -14,11 +14,11 @@ jobs:
       - uses: actions/setup-node@master
         with:
         node-version: 12
-        - run: npm ci
-        - run: npm run bulid
-        - uses: w9jds/firebase-action@master
-          with: 
-            args: deploy --only hosting
-          env: 
-            FIREBASE_TOKEN: '${{ secrets.$FIREBASE_SERVICE_ACCOUNT_FIR_TESTING_9D080 }}' 
+      - run: npm ci
+      - run: npm run bulid
+      - uses: w9jds/firebase-action@master
+        with: 
+          args: deploy --only hosting
+        env: 
+          FIREBASE_TOKEN: '${{ secrets.$FIREBASE_SERVICE_ACCOUNT_FIR_TESTING_9D080 }}' 
           
