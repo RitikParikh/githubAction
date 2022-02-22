@@ -12,9 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
-      - run: npm ci && npm run build
         with:
-          node-version: 12
+        node-version: 12
         - run: npm ci
         - run: npm run bulid
         - uses: w9jds/firebase-action@master
